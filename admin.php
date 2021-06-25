@@ -1,10 +1,6 @@
 <?php
 require "auth.php";
 require_once 'funcs.php';
-date_default_timezone_set("Europe/Kiev");
-/*
-echo $messages = get_mess();
-$messages = array_mess($messages);*/
 ?>
 <!DOCTYPE html>
 <html lang="ua">
