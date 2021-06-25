@@ -60,21 +60,10 @@ function save_mess() {
 
     mysqli_query($mysqli, "INSERT INTO `zvitsdata` (`crew`, `surname`, `patrol`, `patrolNum`, `callsForChange`, `adminSupervision`, `carIsChecked`, `personsChecked`, `formDecreeEL`, `formDecreeELInput`, `formDecreeELArticleInput`, `personsCheckedPapper`, `formDecreePapperInput`, `formDecreePapperArticleInput`, `formProtocol`, `formProtocolPapperInput`, `formProtocolArticleInput`, `formTextareaOther`, `date`) VALUES ('$crew', '$surname', '$patrol', '$patrolNum', '$callsForChange', '$adminSupervision', '$carIsChecked', '$personsChecked', '$formDecreeEL', '$formDecreeELInput', '$formDecreeELArticleInput', '$personsCheckedPapper', '$formDecreePapperInput', '$formDecreePapperArticleInput', '$formProtocol', '$formProtocolPapperInput', '$formProtocolArticleInput', '$formTextareaOther', '$year_month_day')");
      
-/*$sql = "INSERT INTO `zvitsdata` (`crew`, `surname`, `patrol`, `patrolNum`, `callsForChange`, `adminSupervision`, `carIsChecked`, `personsChecked`, `formDecreeEL`, `formDecreeELInput`, `formDecreeELArticleInput`, `personsCheckedPapper`, `formDecreePapperInput`, `formDecreePapperArticleInput`, `formProtocol`, `formProtocolPapperInput`, `formProtocolArticleInput`, `formTextareaOther`, `date`) VALUES ('$crew', '$surname', '$patrol', '$patrolNum', '$callsForChange', '$adminSupervision', '$carIsChecked', '$personsChecked', '$formDecreeEL', '$formDecreeELInput', '$formDecreeELArticleInput', '$personsCheckedPapper', '$formDecreePapperInput', '$formDecreePapperArticleInput', '$formProtocol', '$formProtocolPapperInput', '$formProtocolArticleInput', '$formTextareaOther', '$year_month_day')"; 
-
-if($mysqli->query($sql)){
-    echo "<script>alert('Звіт відправлено!');</script></p>";
-} else{
-    echo "<p style='color: red;'>Помилка: " . $conn->error . "</p>";
-}
-$mysqli->close();*/
-        mysqli_close($mysqli);
-        if(!empty($_POST)){
-            header("Location: {$_SERVER['PHP_SELF']}");
+    mysqli_close($mysqli);
+    if(!empty($_POST)){
+         header("Location: {$_SERVER['PHP_SELF']}");
             exit;
         }
     }
 }
-
-
-
